@@ -20,7 +20,7 @@ import java.net.URL
 import java.util.*
 
 
-class HelloController: Initializable {
+class Controller: Initializable {
 
     @FXML private lateinit var usrInput: TextField
     @FXML private lateinit var requestButton: Button
@@ -77,15 +77,16 @@ class HelloController: Initializable {
         }
         catch (e: Exception) {
             AlertPane(Alert.AlertType.ERROR,
-                "Error", null, "Error while opening URL")
+                "Error", "Error while opening URL", e.message.toString())
                 .makeAlert { null }
+
         }
     }
 
     private fun getData(usr: String) {
 
         showLoading()
-        CoroutineScope(Dispatchers.Default).launch {
+        CoroutineScope(Dispatchers.Main).launch {
             val response = apiInterface.getUser(usr)
             try {
                 if (response.isSuccessful) {

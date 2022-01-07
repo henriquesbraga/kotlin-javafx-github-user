@@ -12,7 +12,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox alignment="CENTER" prefHeight="450.0" prefWidth="500.0" spacing="20.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.henriquesbraga.githubapiconsumer.controller.HelloController">
+<VBox alignment="CENTER" prefHeight="450.0" prefWidth="500.0" spacing="20.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.henriquesbraga.githubapiconsumer.controller.Controller">
     <AnchorPane prefHeight="450.0" prefWidth="450.0" style="-fx-background-color: white;" VBox.vgrow="ALWAYS">
         <children>
             <Label layoutX="14.0" layoutY="14.0" text="Github API">
@@ -42,7 +42,7 @@
             <children>
                <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="150.0" layoutY="150.0" pickOnBounds="true" preserveRatio="true">
                   <image>
-                     <Image url="@hug.gif" />
+                     <Image url="@loading.gif" />
                   </image>
                </ImageView>
             </children>
