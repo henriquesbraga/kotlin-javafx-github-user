@@ -12,7 +12,6 @@ class AlertPane (private val type: Alert.AlertType, private val title: String, p
         alert.headerText = headerText
         alert.contentText = contentText
         alert.isResizable = true
-
         val result = alert.showAndWait()
         when (result.orElse(ButtonType.CANCEL)) {
             ButtonType.OK -> callback.invoke()

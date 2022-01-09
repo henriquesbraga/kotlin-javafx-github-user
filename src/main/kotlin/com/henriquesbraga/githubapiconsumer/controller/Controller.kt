@@ -78,8 +78,6 @@ class Controller: Initializable {
         catch (e: Exception) {
             AlertPane(Alert.AlertType.ERROR,
                 "Error", "Error while opening URL", e.message.toString())
-                .makeAlert { null }
-
         }
     }
 
