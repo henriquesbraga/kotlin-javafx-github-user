@@ -99,7 +99,6 @@ class Controller: Initializable {
                         AlertPane(Alert.AlertType.ERROR,
                             "Not Found", null, "User not found!")
                             .makeAlert { hideLoading() }
-
                     }
                 }
             }

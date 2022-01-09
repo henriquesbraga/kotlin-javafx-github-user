@@ -1,25 +1,31 @@
 package com.henriquesbraga.githubapiconsumer.model
 
-import kotlinx.serialization.SerialName
-import kotlinx.serialization.Serializable
+import com.google.gson.annotations.Expose
+import com.google.gson.annotations.SerializedName
 
-@Serializable()
-data class User(
-    @SerialName("name")
+data class User (
+
+    @Expose
+    @SerializedName("name")
     val username: String?,
 
-    @SerialName("company")
+    @Expose
+    @SerializedName("company")
     val company: String?,
 
-    @SerialName("bio")
+    @Expose
+    @SerializedName("bio")
     val bio: String?,
 
-    @SerialName("followers")
+    @Expose
+    @SerializedName("followers")
     val usrFollowers: Int?,
 
-    @SerialName("public_repos")
+    @Expose
+    @SerializedName("public_repos")
     val usrRepositories: Int?,
 
-    @SerialName("avatar_url")
+    @Expose
+    @SerializedName("avatar_url")
     val avatarUrl: String?
 )

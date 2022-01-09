@@ -10,7 +10,7 @@ import kotlin.system.exitProcess
 
 class HelloApplication : Application() {
     override fun start(stage: Stage) {
-        val fxmlLoader = FXMLLoader(HelloApplication::class.java.getResource("view.fxml"))
+        val fxmlLoader = FXMLLoader(HelloApplication::class.java.getResource("/view.fxml"))
         val scene = Scene(fxmlLoader.load(), 500.0, 450.0)
         stage.title = "GitHub API!"
         //stage.isResizable = false
@@ -20,9 +20,8 @@ class HelloApplication : Application() {
         stage.show()
         stage.setOnCloseRequest { Platform.exit(); exitProcess(0) }
     }
-}
-
-fun main() {
-    Application.launch(HelloApplication::class.java)
+    fun main() {
+        Application.launch(HelloApplication::class.java)
+    }
 }
 

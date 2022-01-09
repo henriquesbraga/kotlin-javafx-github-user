@@ -1,12 +1,14 @@
 package com.henriquesbraga.githubapiconsumer.model
 
-import kotlinx.serialization.SerialName
-import kotlinx.serialization.Serializable
+import com.google.gson.annotations.Expose
+import com.google.gson.annotations.SerializedName
 
-@Serializable
+
 data class UserRepo(
-    @SerialName("name")
+    @Expose
+    @SerializedName("name")
     val name: String,
-    @SerialName("html_url")
+    @Expose
+    @SerializedName("html_url")
     val url: String
 )
